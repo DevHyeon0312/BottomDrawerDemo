@@ -55,6 +55,12 @@ val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
     }
 })
 
+STATE_COLLAPSED : BottomSheet가 축소되었음 (peek 높이만큼은 보여짐)
+STATE_EXPANDED : BottomSheet가 최대 높이까지 완전히 확장되고 BottomSheet의 모든 내용이 표시됨
+STATE_DRAGGING : BottomSheet가 위쪽 또는 아래쪽 방향으로 끌고 있음
+STATE_SETTLING : BottomSheet가 최대 높이 또는 peek 높이로 정착 중
+STATE_HIDDEN : BottomSheet가 숨겨져 있음
+
 BasicBottomSheet
         .Begin(activity = this@MainActivity)
         .hide(false)
@@ -74,11 +80,6 @@ BasicBottomSheet
         .addContents(bodyFragment)
         .commit()
         
-STATE_COLLAPSED : BottomSheet가 축소되었음 (peek 높이만큼은 보여짐)
-STATE_EXPANDED : BottomSheet가 최대 높이까지 완전히 확장되고 BottomSheet의 모든 내용이 표시됨
-STATE_DRAGGING : BottomSheet가 위쪽 또는 아래쪽 방향으로 끌고 있음
-STATE_SETTLING : BottomSheet가 최대 높이 또는 peek 높이로 정착 중
-STATE_HIDDEN : BottomSheet가 숨겨져 있음
 ```
 ### 3. Feature Description
 
