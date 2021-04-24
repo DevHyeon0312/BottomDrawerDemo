@@ -9,9 +9,8 @@
 
 ---
 # Demo App
-
-<img src= "https://user-images.githubusercontent.com/72678200/115964761-e7d6f580-a560-11eb-8ffe-39d61a2038ec.png" width="30%" height="30%"> <img src= "https://user-images.githubusercontent.com/72678200/115964762-ea394f80-a560-11eb-904a-e238a82cea90.png" width="30%" height="30%"> <img src= "https://user-images.githubusercontent.com/72678200/115964783-04732d80-a561-11eb-9149-4bef24953591.png" width="30%" height="30%">
-<img src= "https://user-images.githubusercontent.com/72678200/115964800-1523a380-a561-11eb-8c3b-bc1b6e3b3230.png" width="30%" height="30%"> <img src= "https://user-images.githubusercontent.com/72678200/115964806-1c4ab180-a561-11eb-81c2-8c3b3b654739.png" width="30%" height="30%">
+<img src= "https://user-images.githubusercontent.com/72678200/115966275-c299b580-a567-11eb-9911-98c33910131a.gif" width="30%" height="30%"> <img src= "https://user-images.githubusercontent.com/72678200/115966278-cd544a80-a567-11eb-9f64-1596b2415dbd.gif" width="30%" height="30%"> <img src= "https://user-images.githubusercontent.com/72678200/115966280-ce857780-a567-11eb-85c1-26ab994a6ca5.gif" width="30%" height="30%">
+<img src= "https://user-images.githubusercontent.com/72678200/115966282-cf1e0e00-a567-11eb-9bdc-1010fb4f2b17.gif" width="30%" height="30%"> <img src= "https://user-images.githubusercontent.com/72678200/115966283-cfb6a480-a567-11eb-87f6-288b2ee1613c.gif" width="30%" height="30%">
 
 
 ---
