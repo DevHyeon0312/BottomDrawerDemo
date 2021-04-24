@@ -45,12 +45,12 @@ val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
 
     override fun onStateChanged(bottomSheet: View, newState: Int) {
         when (newState) {
-            BottomSheetBehavior.STATE_COLLAPSED -> Toast.makeText(this@MainActivity, "STATE_COLLAPSED", Toast.LENGTH_SHORT).show()
-            BottomSheetBehavior.STATE_EXPANDED -> Toast.makeText(this@MainActivity, "STATE_EXPANDED", Toast.LENGTH_SHORT).show()
-            BottomSheetBehavior.STATE_DRAGGING -> Toast.makeText(this@MainActivity, "STATE_DRAGGING", Toast.LENGTH_SHORT).show()
-            BottomSheetBehavior.STATE_SETTLING -> Toast.makeText(this@MainActivity, "STATE_SETTLING", Toast.LENGTH_SHORT).show()
-            BottomSheetBehavior.STATE_HIDDEN -> Toast.makeText(this@MainActivity, "STATE_HIDDEN", Toast.LENGTH_SHORT).show()
-            else -> Toast.makeText(this@MainActivity, "OTHER_STATE", Toast.LENGTH_SHORT).show()
+            BottomSheetBehavior.STATE_COLLAPSED -> {}
+            BottomSheetBehavior.STATE_EXPANDED -> {}
+            BottomSheetBehavior.STATE_DRAGGING -> {}
+            BottomSheetBehavior.STATE_SETTLING -> {}
+            BottomSheetBehavior.STATE_HIDDEN -> {}
+            else -> {}
         }
     }
 })
