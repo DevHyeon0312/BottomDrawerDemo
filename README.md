@@ -53,6 +53,15 @@ val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
         }
     }
 })
+
+BasicBottomSheet
+        .Begin(activity = this@MainActivity)
+        .hide(false)
+        .peekHeight(60)
+        .addTitle(titleFragment)
+        .addContents(bodyFragment)
+        .addCallBack(callback)
+        .commit()
 ```
 ### 2. If you don't want a callback
 ```
