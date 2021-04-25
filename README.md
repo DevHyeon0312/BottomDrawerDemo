@@ -38,7 +38,7 @@ allprojects {
 
 ### 1. Create Fragment (If you don't have experience in creating a fragment, check the demo project.)
 
-### 2. Xml
+### 2. YourActivity.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
