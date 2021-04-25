@@ -29,9 +29,9 @@ allprojects {
 }
 ```
 
-- Add the dpendency ( 2020.04.25 Last Update. version 1.0.0 )
+- Add the dpendency
 ```
-    implementation 'com.github.kr-OL:BottomDrawer:1.0.0'
+    implementation 'com.github.kr-OL:BottomDrawer:1.1.0'
 ```
 
 # Use
@@ -111,6 +111,19 @@ BasicBottomSheet
         .peekHeight(60)
         .addTitle(titleFragment)
         .addContents(bodyFragment)
+        .commit()
+        
+```
+
+### 3. If you hidden start
+```
+BasicBottomSheet
+        .Begin(activity = this@MainActivity)
+        .hide(false)
+        .peekHeight(60)
+        .addTitle(titleFragment)
+        .addContents(bodyFragment)
+        .hidden(true)   // Must with hide(true)
         .commit()
         
 ```
