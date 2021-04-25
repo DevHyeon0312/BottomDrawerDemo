@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".basic.BasicActivity"/>
+        <activity android:name=".googleDrive.GoogleDriveActivity"/>
+        <activity android:name=".googlemap.GoogleMapActivity"/>
     </application>
 
 </manifest>

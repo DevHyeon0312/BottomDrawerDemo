@@ -1,44 +1,32 @@
 package com.bottomupdrawer.demo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
-import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.bottomupdrawer.demo.basic.BasicActivity
+import com.bottomupdrawer.demo.databinding.ActivityMainBinding
+import com.bottomupdrawer.demo.googleDrive.GoogleDriveActivity
+import com.bottomupdrawer.demo.googleDrive.GoogleDriveFragment
+import com.bottomupdrawer.demo.googlemap.GoogleMapActivity
 import lib.bottomupdrawer.BasicBottomSheet
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        binding.button.setOnClickListener {
+            startActivity(Intent(this@MainActivity,BasicActivity::class.java))
+        }
 
-        val titleFragment = TitleFragment()
-        val bodyFragment = BodyFragment()
+        binding.button2.setOnClickListener {
+            startActivity(Intent(this@MainActivity,GoogleDriveActivity::class.java))
+        }
 
-        val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, slideOffset: Float) {
-            }
-
-            override fun onStateChanged(bottomSheet: View, newState: Int) {
-                when (newState) {
-                    BottomSheetBehavior.STATE_COLLAPSED -> {}
-                    BottomSheetBehavior.STATE_EXPANDED -> {}
-                    BottomSheetBehavior.STATE_DRAGGING -> {}
-                    BottomSheetBehavior.STATE_SETTLING -> {}
-                    BottomSheetBehavior.STATE_HIDDEN -> {}
-                    else -> {}
-                }
-            }
-        })
-
-        BasicBottomSheet
-                .Begin(activity = this@MainActivity)
-                .hide(false)
-                .peekHeight(60)
-                .addTitle(titleFragment)
-                .addContents(bodyFragment)
-                .addCallBack(callback)
-                .commit()
+        binding.button3.setOnClickListener {
+            startActivity(Intent(this@MainActivity,GoogleMapActivity::class.java))
+        }
     }
 }

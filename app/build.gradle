@@ -47,5 +47,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     /** BottomDrawer */
-    implementation 'com.github.kr-OL:BottomDrawer:1.0.0'
+    implementation 'com.github.kr-OL:BottomDrawer:1.1.0'
 }
