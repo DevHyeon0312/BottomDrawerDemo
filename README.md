@@ -133,22 +133,43 @@ val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
 })
 ```
 # BottomSheet State
-- STATE_COLLAPSED : BottomSheet가 축소되었음 (peek 높이만큼은 보여짐)
-- STATE_EXPANDED : BottomSheet가 최대 높이까지 완전히 확장되고 BottomSheet의 모든 내용이 표시됨
-- STATE_DRAGGING : BottomSheet가 위쪽 또는 아래쪽 방향으로 끌고 있음
-- STATE_SETTLING : BottomSheet가 최대 높이 또는 peek 높이로 정착 중
-- STATE_HIDDEN : BottomSheet가 숨겨져 있음
+#### 1️⃣ STATE_COLLAPSED  
+This state indicates that the BottomSheet is collapsed.
+    
+#### 2️⃣ STATE_EXPANDED  
+This state indicates that the BottomSheet is fully expanded to its maximum height and all the content of the BottomSheet is visible.
+    
+#### 3️⃣ STATE_DRAGGING  
+This state indicates that the BottomSheet is dragging either in the upward direction or in the downward direction.
+    
+#### 4️⃣ STATE_SETTLING  
+This state indicates that the BottomSheet is settling either to the max height or to the peek height.
+    
+#### 5️⃣ STATE_HIDDEN  
+This state indicates that the BottomSheet is hidden
 
 
-# Builder Methods
-- a. Begin(activity)                  : begin
-- b. hide(boolean)                    : If you type true, you cannot return the fragment if it disappears from the screen.
-- c. peekHeight(int)                  : Sets the height shown on the screen without being hidden (if the height is 30dp, enter 30).
-- d. addTitle(fragment)               : Generally, this is a fragment that corresponds to the title you want to show at the top.
-- e. addContents(fragment)            : Fragment corresponding to contents that are usually hidden and appear.
-- f. titleMargin(int,int,int,int)     : If you want to apply the margin to the title fragment, pass dp in order (left, top, right, bottom). (30 dp = 30 delivered)
-- g. contentsMargin(int,int,int,int)  : If you want to apply the margin to the contents fragment, pass the dp in order (left, top, right, bottom). (30 dp = 30 delivered)
-- h. commit()                         : commit
+# Builder Methods 
+### 🔴 Must 🟠 Sometimes Fource 🟢 Select
+
+🔴 Begin(activity). 
+begin
+🟠 hide(boolean)  
+If you type true, you cannot return the fragment if it disappears from the screen.
+🟢 peekHeight(int)  
+Sets the height shown on the screen without being hidden (if the height is 30dp, enter 30).
+🟢 addTitle(fragment)  
+Generally, this is a fragment that corresponds to the title you want to show at the top.
+🟢 addContents(fragment)  
+Fragment corresponding to contents that are usually hidden and appear.
+🟢 titleMargin(int,int,int,int)  
+If you want to apply the margin to the title fragment, pass dp in order (left, top, right, bottom). (30 dp = 30 delivered)
+🟢 contentsMargin(int,int,int,int)  
+If you want to apply the margin to the contents fragment, pass the dp in order (left, top, right, bottom). (30 dp = 30 delivered)
+🟢 addCallback(callback)  
+🟢 hidden(isHidden)  
+🔴 commit()  
+commit
 
 
 # License
