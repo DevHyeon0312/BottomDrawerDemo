@@ -115,7 +115,7 @@ BasicBottomSheet
         
 ```
 
-# Feature Description
+# Funtion Description
 
 <img src="https://user-images.githubusercontent.com/72678200/115965083-684a2600-a562-11eb-9f6f-c8bfebf65eb5.png"  width="80%" height="80%">
 
