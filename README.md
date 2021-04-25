@@ -29,15 +29,48 @@ allprojects {
 }
 ```
 
-- Add the dpendency ( 2020.04.25 Last Update. version 1.0.0 )
+- Add the dpendency
 ```
-    implementation 'com.github.kr-OL:BottomDrawer:1.0.0'
+    implementation 'com.github.kr-OL:BottomDrawer:1.1.0'
 ```
 
 # Use
 
 ### 1. Create Fragment (If you don't have experience in creating a fragment, check the demo project.)
-### 2. If you want a callback
+
+### 2. YourActivity.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d8d8"
+    tools:viewBindingIgnore="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/layout_basic_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
+
+### 3. If you want a callback
 ```
 val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
     override fun onSlide(bottomSheet: View, slideOffset: Float) {
@@ -55,6 +88,12 @@ val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
     }
 })
 
+STATE_COLLAPSED : BottomSheet가 축소되었음 (peek 높이만큼은 보여짐)
+STATE_EXPANDED : BottomSheet가 최대 높이까지 완전히 확장되고 BottomSheet의 모든 내용이 표시됨
+STATE_DRAGGING : BottomSheet가 위쪽 또는 아래쪽 방향으로 끌고 있음
+STATE_SETTLING : BottomSheet가 최대 높이 또는 peek 높이로 정착 중
+STATE_HIDDEN : BottomSheet가 숨겨져 있음
+
 BasicBottomSheet
         .Begin(activity = this@MainActivity)
         .hide(false)
@@ -64,7 +103,7 @@ BasicBottomSheet
         .addCallBack(callback)
         .commit()
 ```
-### 2. If you don't want a callback
+### 3. If you don't want a callback
 ```
 BasicBottomSheet
         .Begin(activity = this@MainActivity)
@@ -74,13 +113,22 @@ BasicBottomSheet
         .addContents(bodyFragment)
         .commit()
         
-STATE_COLLAPSED : BottomSheet가 축소되었음 (peek 높이만큼은 보여짐)
-STATE_EXPANDED : BottomSheet가 최대 높이까지 완전히 확장되고 BottomSheet의 모든 내용이 표시됨
-STATE_DRAGGING : BottomSheet가 위쪽 또는 아래쪽 방향으로 끌고 있음
-STATE_SETTLING : BottomSheet가 최대 높이 또는 peek 높이로 정착 중
-STATE_HIDDEN : BottomSheet가 숨겨져 있음
 ```
-### 3. Feature Description
+
+### 3. If you hidden start
+```
+BasicBottomSheet
+        .Begin(activity = this@MainActivity)
+        .hide(false)
+        .peekHeight(60)
+        .addTitle(titleFragment)
+        .addContents(bodyFragment)
+        .hidden(true)   // Must with hide(true)
+        .commit()
+        
+```
+
+# Description
 
 <img src="https://user-images.githubusercontent.com/72678200/115965083-684a2600-a562-11eb-9f6f-c8bfebf65eb5.png"  width="80%" height="80%">
 
