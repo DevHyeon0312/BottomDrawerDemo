@@ -61,7 +61,7 @@ BasicBottomSheet
 ---
 
 # Note
-BottomDrawer uses Coordinator Layout. so, Activity.xml you want to use should be filled out as below.
+#### BottomDrawer uses Coordinator Layout. so, Activity.xml you want to use should be filled out as below.
 ```html
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -92,7 +92,7 @@ BottomDrawer uses Coordinator Layout. so, Activity.xml you want to use should be
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
-BottomDrawer uses BottomShee. Therefore, to register Callback, you must create it as below.
+#### BottomDrawer uses BottomShee. Therefore, to register Callback, you must create it as below.
 java
 ```java
 BottomSheetBehavior.BottomSheetCallback callback = (new BottomSheetBehavior.BottomSheetCallback() {
