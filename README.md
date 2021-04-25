@@ -154,21 +154,30 @@ This state indicates that the BottomSheet is hidden
 
 🔴 Begin(activity). 
 begin
-🟠 hide(boolean)  
+
+#### 🟠 hide(boolean)  
 If you type true, you cannot return the fragment if it disappears from the screen.
-🟢 peekHeight(int)  
+
+#### 🟢 peekHeight(int)  
 Sets the height shown on the screen without being hidden (if the height is 30dp, enter 30).
-🟢 addTitle(fragment)  
+
+#### 🟢 addTitle(fragment)  
 Generally, this is a fragment that corresponds to the title you want to show at the top.
-🟢 addContents(fragment)  
+
+#### 🟢 addContents(fragment)  
 Fragment corresponding to contents that are usually hidden and appear.
-🟢 titleMargin(int,int,int,int)  
+
+#### 🟢 titleMargin(int,int,int,int)  
 If you want to apply the margin to the title fragment, pass dp in order (left, top, right, bottom). (30 dp = 30 delivered)
-🟢 contentsMargin(int,int,int,int)  
+
+#### 🟢 contentsMargin(int,int,int,int)  
 If you want to apply the margin to the contents fragment, pass the dp in order (left, top, right, bottom). (30 dp = 30 delivered)
-🟢 addCallback(callback)  
-🟢 hidden(isHidden)  
-🔴 commit()  
+
+#### 🟢 addCallback(callback)  
+
+#### 🟢 hidden(isHidden)  
+
+#### 🔴 commit()  
 commit
 
 
