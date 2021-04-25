@@ -1,6 +1,8 @@
 
 ![Version](https://img.shields.io/badge/LastVersion-1.1.0-blue) [![LibSource Badge](https://img.shields.io/badge/LibSource-BottomSheet-brightgreen)](https://github.com/kr-OL/BottomDrawer) [![Blog Badge](https://img.shields.io/badge/ExampleGuide(KR)-Blog-brightgreen)](https://devhyeon0312.tistory.com/10)
 
+#### ⭐️ Giving the author a star is a good sense. ⭐️
+
 # Android BottomDrawer
 BottomDrawer helps you customize bottom sheets easily.
 Simply create and insert a Fragment into the supplied Frame.
