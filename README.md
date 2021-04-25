@@ -37,7 +37,40 @@ allprojects {
 # Use
 
 ### 1. Create Fragment (If you don't have experience in creating a fragment, check the demo project.)
-### 2. If you want a callback
+
+### 2. Xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d8d8"
+    tools:viewBindingIgnore="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/layout_basic_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
+
+### 3. If you want a callback
 ```
 val callback = (object : BottomSheetBehavior.BottomSheetCallback() {
     override fun onSlide(bottomSheet: View, slideOffset: Float) {
@@ -70,7 +103,7 @@ BasicBottomSheet
         .addCallBack(callback)
         .commit()
 ```
-### 2. If you don't want a callback
+### 3. If you don't want a callback
 ```
 BasicBottomSheet
         .Begin(activity = this@MainActivity)
@@ -81,7 +114,8 @@ BasicBottomSheet
         .commit()
         
 ```
-### 3. Feature Description
+
+### 4. Feature Description
 
 <img src="https://user-images.githubusercontent.com/72678200/115965083-684a2600-a562-11eb-9f6f-c8bfebf65eb5.png"  width="80%" height="80%">
 
