@@ -152,11 +152,12 @@ This state indicates that the BottomSheet is hidden
 # Builder Methods 
 ### 🔴 Must 🟠 Sometimes Fource 🟢 Select
 
-🔴 Begin(activity). 
+🔴 Begin(activity)  
 begin
 
 #### 🟠 hide(boolean)  
-If you type true, you cannot return the fragment if it disappears from the screen.
+If you type true, you cannot return the fragment if it disappears from the screen.  
+Invoking hidden(true) must be accompanied by hidden(true).
 
 #### 🟢 peekHeight(int)  
 Sets the height shown on the screen without being hidden (if the height is 30dp, enter 30).
@@ -174,8 +175,11 @@ If you want to apply the margin to the title fragment, pass dp in order (left, t
 If you want to apply the margin to the contents fragment, pass the dp in order (left, top, right, bottom). (30 dp = 30 delivered)
 
 #### 🟢 addCallback(callback)  
+Called when you want to define additional behavior based on callback.
 
 #### 🟢 hidden(isHidden)  
+With hidden(true), it starts with the state STATE_HIDDEN when it is created.  
+At this point, you must use both sides (true).
 
 #### 🔴 commit()  
 commit
